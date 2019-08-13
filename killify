@@ -1,3 +1,7 @@
 #!/bin/bash
 
-ps x | pgrep spotify
+ps x | pgrep spotify | sed 's|^|kill |' >> random.txt
+chmod +x random.txt
+./random.txt
+rm random.txt
+spotify 
